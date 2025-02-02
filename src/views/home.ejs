@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="active" href="#about">About</a></li>
+    </ul>
+    <form class="form" action="/create-user" method="POST">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="input-group">
+          <label for="">Email</label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <div class="input-group">
+          <label for="">Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="input-group">
+          <label for="">City</label>
+          <input type="text" name="city" id="city" />
+        </div>
+        <div>
+          <button class="btn btn-save">Save</button>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

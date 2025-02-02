@@ -1,16 +1,21 @@
 const {connection} = require("../config/databases");
 
 const getHomepage = (req, res) => {
-  connection.query("SELECT * FROM Users", function (err, results, fields) {
-    res.send(JSON.stringify(results));
-  });
-  // res.send("Hello mon World!");
+
+  return res.render("home.ejs");  
 };
 const getTest = (req, res) => {
   res.render("sample.ejs");
 };
 
+const postCreateUser = (req,res)=>{
+  console.log(req.body);
+  res.send('Create user success')
+
+}
+
 module.exports = {
   getHomepage,
   getTest,
+  postCreateUser
 };
