@@ -1,5 +1,10 @@
+const {connection} = require("../config/databases");
+
 const getHomepage = (req, res) => {
-  res.send("Hello mon World!");
+  connection.query("SELECT * FROM Users", function (err, results, fields) {
+    res.send(JSON.stringify(results));
+  });
+  // res.send("Hello mon World!");
 };
 const getTest = (req, res) => {
   res.render("sample.ejs");
